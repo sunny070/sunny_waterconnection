@@ -17,6 +17,7 @@ class ApplicationFormController extends Controller
 
         $applicationforms= new Applicationform();
         // 
+        $applicationforms->Application_date=request('Application_No');
         $applicationforms->Application_date=request('Application_date');
         $applicationforms->Applicant_Name=request('Applicant_Name');
         $applicationforms->DOB=request('DOB');
@@ -159,28 +160,28 @@ class ApplicationFormController extends Controller
     //     return view('sectionclerk') ->with ('sectionclerk',$sectionclerk);
     // }
 
-    public function update(Request $request , $id)
-    {
-        $status= Applicationform::find($id);
+    // public function update(Request $request , $id)
+    // {
+    //     $status= Applicationform::find($id);
 
-        if($request->has('approve')){
-            $status->Remarks_from_ExecutiveEngineer = 'Accepted';
-            $status->save();
-            return redirect('/forwardere');
-        }
-        elseif($request->has('reject')){
-            return view ('reject/RejectForwardere',['ApplicationForms'=>$status]);
-        }
-    }
+    //     if($request->has('approve')){
+    //         $status->Remarks_from_ExecutiveEngineer = 'Accepted';
+    //         $status->save();
+    //         return redirect('/forwardere');
+    //     }
+    //     elseif($request->has('reject')){
+    //         return view ('reject/RejectForwardere',['ApplicationForms'=>$status]);
+    //     }
+    // }
 
 
-    public function update1(Request $request , $id){
-        $status= ApplicationForm::find($id);
+    // public function update1(Request $request , $id){
+    //     $status= ApplicationForm::find($id);
     
-        $status->Remarks_from_ExecutiveEngineer=request('Remark');
-        $status->save();
-        return redirect('home');
-    }
+    //     $status->Remarks_from_ExecutiveEngineer=request('Remark');
+    //     $status->save();
+    //     return redirect('home');
+    // }
 
     // public function update2(Request $request , $id)
     // {

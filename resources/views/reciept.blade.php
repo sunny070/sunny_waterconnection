@@ -57,8 +57,8 @@ p{
   <body>
   <div class="box">
 
-    <h1><u>Acknowledgement</u></h1>
-    <p id="size" class="text">This is to acknowledge the receipt <u>New Water Connection</u><br> with Application Number: <u><b>{{$data->Applicant_No}}</b></u> <br> with Application Name.: <u><b>{{$data->Applicant_Name}}</b></u>  <br> dated on <u><b>{{$data->Application_date}}</b></u> to the SDO  has been Submitted.</p>
+    <h1><u>Reciept</u></h1>
+    <p id="size" class="text"><u>New Water Connection</u><br> with Application Number: <u><b>{{$data->Applicant_No}}</b></u> <br> with Application Name.: <u><b>{{$data->Applicant_Name}}</b></u>  <br> dated on <u><b>{{$data->Application_date}}</b></u>please pay the meter bill to the PHE Dept.</p>
     <br>
     <br>
     <div class="place" id="size">Place: {{$data->Present_Address_District}}</div>

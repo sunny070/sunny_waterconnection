@@ -81,6 +81,8 @@
 
 </style>
 
+
+
 <body>
     
 @extends('layouts.app')
@@ -98,6 +100,7 @@
             <div id="personalDetail" class="block">
                 <p class="address">Personal Detail :--</p>
                 <!-- <li>Application no: <input type="text" name="Application_No"></li> -->
+                <li>Application Number : <input  type="text" name="Application_No" placeholder="Application Number" required></li>
                 <li>Application date : <input  type="date" name="Application_date" placeholder="Application date" required></li>
                 <li>Applicant Name*: <input type="text" name="Applicant_Name"placeholder="Applicant Name" required></li>
                 <!-- <li>EPIC / UID No.* : <input type="number" name="EPIC_UID_No." placeholder=""></li> -->
@@ -498,9 +501,11 @@
                     </ul> 
                 </li>
                 </div>
-
+                
                 <div id="permanent_adress" class="block">
+                
                 <li><p class="address">Permanent Address :--</p>
+                
                     <ul class="address1_list">
                         <li>House no.* : <input type="text"name="Permanent_Address_Hno" placeholder="H/no." required></li>
                         <li>Sub locality 1* : <input type="text"name="Permanent_Address_Sub_locality1" placeholder="Sub locality1" required></li>

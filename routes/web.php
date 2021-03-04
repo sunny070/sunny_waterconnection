@@ -74,6 +74,10 @@ Route::get('/supritendentengineer/{id}','SupritendentengineerController@retrive2
 Route::get('/sectionclerk/{id}','SectionclerkController@retrive3');
 
 
+//Contact us
+Route::get('/Contact', function () {
+    return view('contact');
+});
 //disclamer
 Route::get('/disclamer', function () {
     return view('disclamer');
@@ -130,7 +134,10 @@ Route::get('/download9/{id}','ExecutiveController@download9');
 
 // check status
 //acknowledgement download
-Route::get('/acknowledgement/{id}','DownloadController@mypdf');
+Route::get('/acknowledgement/{id}','DownloadController@ack');
+
+//reciept
+Route::get('/reciept/{id}','DownloadController@reciept');
 
 //search
 Route::get('/search','CheckstatusController@search');

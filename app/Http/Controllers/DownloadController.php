@@ -9,9 +9,23 @@ use Illuminate\Http\Request;
 
 class DownloadController extends Controller
 {
-    public function mypdf($id){
+    public function ack($id){
         $data =Applicationform:: find($id);
         $pdf = PDF::loadView('acknowledgement',compact('data'));
+        $fileName ="";
+        try{
+            $fileName = $data->Application_No;
+        }
+        catch(Exception $e)
+        {
+            $fileName = 'myInfo';
+        }
+        return $pdf->stream();
+        // return $pdf->download($fileName.'.pdf');
+    }
+    public function reciept($id){
+        $data =Applicationform:: find($id);
+        $pdf = PDF::loadView('reciept',compact('data'));
         $fileName ="";
         try{
             $fileName = $data->Application_No;

@@ -211,7 +211,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     <th>DOC2 </th>
            <td><button id="views" class="btn btn-primary"><a href="/public/images/{{$executiveengineer->doc2}}" target="_blank" id='in'>View</a></button> <button id="downloads" class="btn btn-info"> <a href="/download2/{{$executiveengineer->id}}" id="out">Download</a></button></td>
     </tr>
-    <th>DOC2 </th>
+    <th>DOC3 </th>
            <td><button id="views" class="btn btn-primary"><a href="/public/images/{{$executiveengineer->doc3}}" target="_blank" id='in'>View</a></button> <button id="downloads" class="btn btn-info"> <a href="/download3/{{$executiveengineer->id}}" id="out">Download</a></button></td>
     </tr>
 

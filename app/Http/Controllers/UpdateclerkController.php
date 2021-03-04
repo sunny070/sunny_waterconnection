@@ -22,7 +22,7 @@ class UpdateclerkController extends Controller
     public function update7(Request $request , $id){
         $status= ApplicationForm::find($id);
     
-        $status->Remarks_from_SectionClerk =request('Remarks_from_Forworder');
+        $status->Remarks_from_SectionClerk =request('Remark');
         $status->save();
         // Mail::to($status->Email)->send(new ForwarderRemarksmail($status));
         // ApplicationForm::where('id', $id)->delete();

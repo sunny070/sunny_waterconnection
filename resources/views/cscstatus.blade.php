@@ -46,7 +46,7 @@ tr:nth-child(even) {
    <tbody>
    <tr>
    <td>{{$ad->id}}</td>
-   <td><a href="/sectionclerk/{{$ad->id}}">{{$ad->Applicant_Name}}</a></td>
+   <td>{{$ad->Applicant_Name}}</td>
    <td>{{$ad->Application_date}}</td>
    <td>{{$ad->Present_Address_Location}}</td>
    
@@ -54,13 +54,14 @@ tr:nth-child(even) {
    <td>{{$ad->Remarks_from_ExecutiveEngineer}}</td>
    <td>{{$ad->Remarks_from_JuniorEngineer}}</td>
    <td>{{$ad->Remarks_from_SupritendentEngineer}}</td>
+   <td>{{$ad->Remarks_from_SectionClerk}}</td>
 
-   @if($ad->Remarks_from_ExecutiveEngineer == 'Accepted'|| $ad->Remarks_from_JuniorEngineer == 'Accepted'||$ad->Remarks_from_SupritendentEngineer == 'Accepted')
+   @if($ad->Remarks_from_ExecutiveEngineer == 'Accepted'&& $ad->Remarks_from_JuniorEngineer == 'Accepted'&& $ad->Remarks_from_SupritendentEngineer == 'Accepted')
+      <td id="cert"><a href="/reciept/{{$ad->id}}">Reciept</a></td>
       <td id="ackno"><a href="/acknowledgement/{{$ad->id}}">Acknowledgement</a></td>
-      <td id="cert"><a href="/certificate/{{$ad->id}}">Certificate</a></td>
-      @else
-      <td>Pending</td>
-      <td>Pending</td>
+      
+      @elseif($ad->Remarks_from_ExecutiveEngineer == 'Remark'&& $ad->Remarks_from_JuniorEngineer == 'Remark'&& $ad->Remarks_from_SupritendentEngineer == 'Remark' && $ad->Remarks_from_SectionClerk == 'Remark')
+      
       
       @endif
 

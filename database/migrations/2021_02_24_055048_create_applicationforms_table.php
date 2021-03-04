@@ -15,6 +15,7 @@ class CreateApplicationformsTable extends Migration
     {
         Schema::create('applicationforms', function (Blueprint $table) {
             $table->id();
+            $table->Date('Application_No')->nullable;
             $table->Date('Application_date')->nullable;
             $table->String('Applicant_Name')->nullable;
             $table->Date('DOB')->nullable;
