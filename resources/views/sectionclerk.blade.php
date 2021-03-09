@@ -208,7 +208,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     <form action="/result3/{{$sectionclerk->id}}" method="post">
     @csrf
   <button class="button" name="approve">Approve</button>
-  <button class="button" name="reject">Reject</button>
+  <!-- <button class="button" name="reject">Reject</button> -->
   </form>
 </div>
 

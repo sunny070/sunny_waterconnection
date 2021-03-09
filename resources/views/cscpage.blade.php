@@ -12,7 +12,11 @@
 
 <ul>
 <img src="{{asset('img/OIP.jpg')}}" alt="">
-  <li><a class="active" href="/">Home</a></li>
+    <li><a class="active" href="/">Home</a></li>
+    <li><a href="https://www.ndtv.com/topic/water-supply">News</a></li>
+    <li><a href="/Contact">Contact</a></li>
+    <li><a href="https://www.india.gov.in/about-portal">About</a></li>
+    <li><a href="/rules">Rules</a></li>
 
 </ul>
 <div class="button">
@@ -23,6 +27,7 @@
 
 
 </div>
+
         <!-- Styles -->
         <style>
             html, body {

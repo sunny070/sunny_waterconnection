@@ -30,26 +30,21 @@ tr:nth-child(even) {
    <th>Address</th>
    </tr>
    </th>
-   @foreach($ApplicationForm as $ad)
+   
    <tbody>
-   <tr>
+   
+   
+ 
+    @foreach($ApplicationForm as $ad)
+    @if($ad->Remarks_from_SupritendentEngineer == '')
+    <tr>
    <td>{{$ad->id}}</td>
    <td><a href="/supritendentengineer/{{$ad->id}}">{{$ad->Applicant_Name}}</a></td>
    <td>{{$ad->Application_date}}</td>
    <td>{{$ad->Remarks_from_SupritendentEngineer}}</td>
    <td>{{$ad->Present_Address_Location}}</td>
     </tr>
-
-    @if($ad->Remarks_from_ExecutiveEngineer == 'Accepted'&& $ad->Remarks_from_JuniorEngineer == 'Accepted'&& $ad->Remarks_from_SupritendentEngineer == 'Accepted')
-    @foreach($ApplicationForm as $ad)
-    <tr>
-   <td>{{$ad->id}}</td>
-   <td>{{$ad->Applicant_Name}}</td>
-   <td>{{$ad->Application_date}}</td>
-   <td>{{$ad->Remarks_from_SupritendentEngineer}}</td>
-   <td>{{$ad->Present_Address_Location}}</td>
-    </tr>
-    @endforeach
+  
       @endif
    </tbody>
     @endforeach

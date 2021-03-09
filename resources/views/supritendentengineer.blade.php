@@ -22,7 +22,7 @@ th, td {
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 
-.btn-group .button {
+.btn-group .button1 {
   background-color: #4CAF50; /* Green */
   border: 1px solid green;
   color: white;
@@ -35,12 +35,30 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   float: left;
 }
 
-.btn-group .button:not(:last-child) {
+.btn-group .button2 {
+  background-color: #4CAF50; /* Green */
+  border: 1px solid green;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+.btn-group .button1:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+.btn-group .button2:not(:last-child) {
   border-right: none; /* Prevent double borders */
 }
 
-.btn-group .button:hover {
+.btn-group .button1:hover {
   background-color: #3e8e41;
+}
+.btn-group .button2:hover {
+  background-color: red;
 }
 </style>
   </head>
@@ -206,7 +224,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     <th>DOC2 </th>
            <td><button id="views" class="btn btn-primary"><a href="/public/images/{{$supritendentengineer->doc2}}" target="_blank" id='in'>View</a></button> <button id="downloads" class="btn btn-info"> <a href="/download2/{{$supritendentengineer->id}}" id="out">Download</a></button></td>
     </tr>
-    <th>DOC2 </th>
+    <th>DOC3 </th>
            <td><button id="views" class="btn btn-primary"><a href="/public/images/{{$supritendentengineer->doc3}}" target="_blank" id='in'>View</a></button> <button id="downloads" class="btn btn-info"> <a href="/download3/{{$supritendentengineer->id}}" id="out">Download</a></button></td>
     </tr>
     
@@ -216,8 +234,8 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     <div class="btn-group">
     <form action="/result2/{{$supritendentengineer->id}}" method="POST">
     @csrf
-  <button class="button" name="approve">Approve</button>
-  <button class="button" name="reject">Reject</button>
+  <button class="button1" name="approve">Approve</button>
+  <button class="button2" name="reject">Reject</button>
   </form>
 </div>
 

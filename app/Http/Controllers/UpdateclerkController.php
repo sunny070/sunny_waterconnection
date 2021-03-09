@@ -10,12 +10,13 @@ class UpdateclerkController extends Controller
     {
         $status= Applicationform::find($id);
 
+        // if($request->has('approve')){
+        //     $status->Remarks_from_SectionClerk = 'Accepted';
+        //     $status->save();
+        //     return redirect('forwarderc');
+        // }
+        // else
         if($request->has('approve')){
-            $status->Remarks_from_SectionClerk = 'Accepted';
-            $status->save();
-            return redirect('forwarderc');
-        }
-        elseif($request->has('reject')){
             return view ('reject/RejectForwarderc',['ApplicationForms'=>$status]);
         }
     }

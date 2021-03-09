@@ -38,6 +38,8 @@ tr:nth-child(even) {
    <th>Remarks From Executive Engineer</th>
    <th>Remarks From junior Engineer</th>
    <th>Remarks From Supritendent Engineer</th>
+   <th>Remarks From Cleark</th>
+
    <th>Reciept</th>
    <th>Acknowledgement</th>
    </tr>

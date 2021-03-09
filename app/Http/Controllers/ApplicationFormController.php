@@ -17,7 +17,7 @@ class ApplicationFormController extends Controller
 
         $applicationforms= new Applicationform();
         // 
-        $applicationforms->Application_date=request('Application_No');
+        $applicationforms->Application_No=request('Application_No');
         $applicationforms->Application_date=request('Application_date');
         $applicationforms->Applicant_Name=request('Applicant_Name');
         $applicationforms->DOB=request('DOB');
@@ -94,7 +94,7 @@ class ApplicationFormController extends Controller
  $applicationforms->save();
        // return $applicationform;
 
-         return redirect('home');
+         return redirect('cscpage');
 
 
         // return redirect('application_form/homepage');
